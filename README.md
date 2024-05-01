@@ -1,4 +1,5 @@
 # McMurder_Fight
-# This game shall make you go against a bossfight against McMurder, thanks to Aiden Humprhies for the inspiration. 
-# It's more balanced than it was, but the ending should be prettu hard. I increased McMurders health a lot and made made healing more balanced for the player.
+# This game shall make you go against a bossfight against McMurder, thanks to Aiden Humprhies for the inspiration!
+# It's more balanced than it was, and the ending should now be pretty hard!
+# More Balanced healing system and increased boss health!
 # Defend was also fixed and updated!
