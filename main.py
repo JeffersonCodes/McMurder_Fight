@@ -1,23 +1,29 @@
 from random import randint
 heroName = input("What is your hero's name? ")
 health = 200
-defense = 0
 if heroName == "mcdonalds":
     mcMurderHealth = 10000
+    
 else:
     mcMurderHealth = 1000
 while (mcMurderHealth > 0 and health > 0):
     weapon = 0
     action = int(input("Do you want to Fight(1), Heal(2), or Defend(3) \n"))
     
-    if not(action) == (1 or 2 or 3):
+    if not(action == (1) or action == (2) or action == (3)):
         print("You didn't do anything, too bad")
     elif action == 1 and (heroName == "Jodim" or heroName == "Aldric Eventide" or heroName == "Baiden"):
-        weapon = int(input("Bow(1), Sword(2), Lightning attack(3) \n"))
+        weapon = int(input("Daedalus Stormbow(1), Falcon Blade(2), Lunar Flare(3) \n"))
     elif action == 1:
-        weapon = int(input("Bow(1), Sword(2) \n"))
+        weapon = int(input("Daedalus Stormbow(1), Falcon Blade(2) \n"))
     elif action == 2:
         if health > 100:
+            randomInfluence = randint(1,100)
+            if randint > 85:
+                health = health + randint(10,20)
+                print("You drank a greater healing potion")
+            else:
+                print("You drank a lesser healing potion")
             health = health+randint(10,20)
         else: 
             health = health+randint(20,30)
@@ -26,20 +32,20 @@ while (mcMurderHealth > 0 and health > 0):
         "You prepare to defend yourself from McMurders next attack"
 
     if weapon == 1:
-        print("You shot McMurder with your bow")
+        print("You shot McMurder with your Daedalus Stormbow")
         mcMurderHealth = mcMurderHealth - randint(15,25)
         print("McMurder now has", mcMurderHealth, "health remaining")
     elif weapon == 2:
-        print("You hit McMurder with your sword")
+        print("You hit McMurder with your Falcon Blade")
         mcMurderHealth = mcMurderHealth - randint(25,40)
         print("McMurder now has", mcMurderHealth, "health remaining")
         randomInfluence = randint(1,100)
         if randomInfluence < 21:
             health = health-randomInfluence
-            print("McMurder got you with his McLettuce when you tried to hit him with your sword, you are now at", health, "health")
+            print("McMurder got you with his McLettuce when you tried to hit him with your Falcon Blade, you are now at", health, "health")
             
     elif weapon == 3 and (heroName == "Jodim" or heroName == "Aldric Eventide" or heroName == "Baiden"):
-        print("You summoned the power of nature and called a lighning bolt to strike down McMurder")
+        print("You summoned the power of the moon and called Lunar Flares to strike down McMurder from the sky")
         mcMurderHealth = mcMurderHealth - randint(75,125)
         print("McMurder now has", mcMurderHealth, "health remaining")
     mcRandom = randint(1,100)
