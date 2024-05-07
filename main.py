@@ -98,5 +98,5 @@ while (mcMurderHealth > 0 and health > 0):
 if health <= 0:
     print("You died, try again")
 elif mcMurderHealth <= 0:
-    print("You won, good job", heroName, "!")
+    print("You won, good job", heroName, "!     ")
 
